@@ -1,4 +1,4 @@
-package com.istateca.app.security.filter;
+package com.istateca.app;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
