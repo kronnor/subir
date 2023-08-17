@@ -14,7 +14,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins("*") // your reactjs URL
                 .allowedMethods("GET", "POST", "PATCH", "PUT", "DELETE")
-                .allowedHeaders("Authorization", "Content-Type") // Adjust headers you need to allow
+                .allowedHeaders("*") // Adjust headers you need to allow
                 .allowCredentials(false); // Add only if you want to access cookie
     }
 
