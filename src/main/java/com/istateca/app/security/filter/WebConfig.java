@@ -12,9 +12,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("*") // your reactjs URL
+                .allowedOrigins("http://localhost:4200") // your reactjs URL
                 .allowedMethods("GET", "POST", "PATCH", "PUT", "DELETE")
-                .allowedHeaders("*") // Adjust headers you need to allow
+                .allowedHeaders("Content-Type") // Adjust headers you need to allow
                 .allowCredentials(true); // Add only if you want to access cookie
     }
 
