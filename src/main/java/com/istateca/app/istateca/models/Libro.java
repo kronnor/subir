@@ -209,6 +209,9 @@ public class Libro implements Serializable,Actualizable<Libro> {
         if (entity.getPersona() != null) {
             this.setPersona(entity.getPersona());
         }
+        if (entity.getDonante() != null) {
+            this.setDonante(entity.getDonante());
+        }
     }
 
 }
