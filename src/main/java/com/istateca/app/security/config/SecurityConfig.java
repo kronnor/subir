@@ -73,7 +73,7 @@ public class SecurityConfig {
                         .requestMatchers("/notificacion/**").hasAnyRole("STUD", "BLIB", "ADMIN", "DOCEN")
                         .requestMatchers("/ingresar").authenticated()
                         // Letting Access of fenix to ALL by the moment
-                        .requestMatchers("/ingresar", "/credentials", rutageneral,"/libro/listar").permitAll())
+                        .requestMatchers("/ingresar", "/credentials", rutageneral,"/libro/**").permitAll())
                 .formLogin(Customizer.withDefaults())
                 .httpBasic(Customizer.withDefaults());
         return http.build();
