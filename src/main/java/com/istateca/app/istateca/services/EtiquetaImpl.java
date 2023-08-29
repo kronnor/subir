@@ -22,4 +22,9 @@ public class EtiquetaImpl extends BaseServiceImpl<Etiqueta, Integer> implements 
     public List<Etiqueta> etiquetasxLibros(Integer id) {
         return repository.findAllByLibrosetiquetadosLibroId(id);
     }
+
+    @Override
+    public List<Etiqueta> etiquetasxNombre(String nombre) {
+        return repository.findAllByNombreContainingIgnoreCase(nombre);
+    }
 }

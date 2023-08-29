@@ -9,4 +9,6 @@ import java.util.List;
 public interface EtiquetaRepository extends BaseRepository<Etiqueta,Integer>{
 
     List<Etiqueta> findAllByLibrosetiquetadosLibroId(Integer id);
-}
+
+    List<Etiqueta> findAllByNombreContainingIgnoreCase(String nombre);
+ }

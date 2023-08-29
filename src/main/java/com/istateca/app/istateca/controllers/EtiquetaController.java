@@ -42,5 +42,15 @@ public class EtiquetaController extends BaseController<Etiqueta> {
         }
     }
 
+    @GetMapping("/etiquetaxNombre")
+    public ResponseEntity<List<Etiqueta>> etiquetaxNombre (@RequestParam(value = "nombre") String nombre) {
+        List<Etiqueta> etiquetas = service.etiquetasxNombre(nombre);
+        if (etiquetas.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok(etiquetas);
+        }
+    }
+
     //comentado por culpa de renato >:V
 }

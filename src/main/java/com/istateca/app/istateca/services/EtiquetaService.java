@@ -8,4 +8,6 @@ public interface EtiquetaService  extends BaseService <Etiqueta, Integer>{
 
     List<Etiqueta> etiquetasxLibros(Integer id);
 
+    List<Etiqueta> etiquetasxNombre(String nombre);
+
 }
